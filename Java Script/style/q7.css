@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#btnregister{
+    font-size: 14px;
+    width: 10%;
+    padding: 6px 10px 6px 15px;
+    background-color: gray;
+    color: honeydew;
+}
+
+#btnreset{
+    font-size: 14px;
+    width: 10%;
+    padding: 6px 10px 6px 15px;
+    background-color: gray;
+    color: honeydew;
+}
+
+#tblemain{
+    margin: 10%;
+    width: 50%;
+    height: 80%;
+
+}
+
+#btnsbmsn{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30%;
+}
+
+#txtemail{
+    width : 100%;
+    background: lightseagreen;
+}
+
+#pwdmail{
+    width :100%;
+    background: lightseagreen;
+}
+
+#pwdre{
+    width: 100%;
+    background: lightseagreen;
+}
+
+#txtname{
+    width : 100%;
+    background: lightseagreen;
+}
+
+#txtlastname{
+    width: 100%;
+    background: lightseagreen;
+}
+
+#dtedob{
+    width: 100%;
+    background: lightseagreen;
+}

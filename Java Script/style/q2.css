@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
+}
+#addition{
+    background-color: lightseagreen;
+    color:white;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    font-size: 35px;
+    padding: 6px 10px 6px 10px;
+    border: 2px solid blue;
+}
+#substraction{
+    background-color: lightseagreen;
+    color:white;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    font-size: 35px;
+    padding: 6px 10px 6px 10px;
+    border: 2px solid blue;
+
+}
+#division{
+    background-color: lightseagreen;
+    color:white;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    font-size: 35px;
+    padding: 6px 10px 6px 10px;
+    border: 2px solid blue;
+}
+#multiplication{
+    background-color: lightseagreen;
+    color:white;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    font-size: 35px;
+    padding: 6px 10px 6px 10px;
+    border: 2px solid blue;
+}
+#answer{
+    padding: 12.5% 12.5% 12.5% 12.5%;
+}
+#result{
+    width: 35%;
+    height: 35%;
+    
+    
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Time</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style/q5.css">
+    </head>
+    <body>
+        <div id="main">
+            <input type="text" name="txtHH" value="HH" id="hhone">
+            <input type="text" name="txtHH" value="" id="htone">
+            <input type="text" name="txtHH" value="MM" id="mmtwo">
+            <input type="text" name="txtHH" value="" id="mttwo">
+            <input type="text" name="txtHH" value="SS" id="ssthree">
+            <input type="text" name="txtHH" value="" id="stthree">
+        </div>
+        <script>
+            setInterval(displayclock,2500);
+            
+            function displayclock()
+            {
+                var time = new Date();
+                var hrs = time.getHours();
+                console.log(hrs);
+                var min = time.getMinutes()
+                console.log(min);
+                var sec = time.getSeconds();
+                console.log(sec);
+               
+
+                
+                document.getElementById("main").innerHTML=hrs +":"+min+":"+sec;
+                document.getElementById("htone").innerHTML=hrs;
+                document.getElementById("mttwo").innerHTML=min;
+                document.getElementById("stthree").innerHTML=sec;
+            }
+        </script>
+    </body>
+</html>

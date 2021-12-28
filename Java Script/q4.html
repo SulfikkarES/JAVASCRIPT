@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style/q4.css">
+    </head>
+    <body>
+        <div class="main">
+            <div id="first"><br><br><br>
+                <input type="text" name="txtNumOne" id="one"><br><br><br>
+                <input type="text" name="txtNumTwo" id="two"><br><br><br>
+                <input type="text" name="txtNumThree" id="three"><br><br><br>
+                <input type="text" name="txtNumFour" id="four"><br><br><br>
+                <input type="text" name="txtNumFive" id="five"><br><br><br>
+                <input type="text" name="txtNumSix" id="six"><br><br><br>
+            
+            </div>
+            <div id="second">
+                <button id="btnup" >UP</button><br><br><br><br><br><br>
+                <button id="btndown" >DOWN</button>
+                
+            </div>
+    </div>
+       
+        <script>
+            const btnUp = document.getElementById("btnup");
+            const btnDown = document.getElementById("btndown");
+
+            const numberBoxes = document.querySelectorAll("input");
+            console.log(numberBoxes);
+
+            const arr = [];
+
+            function numberIntoArray()
+            {
+             let counter = 0;
+
+                numberBoxes.forEach(item => 
+                {
+                    arr[counter] = item.value;
+                    counter++;
+                }   )
+            }
+
+            function DisplayNumbersFromArray()
+            {
+                let counter = 0;
+
+                numberBoxes.forEach(item => {       
+
+                item.value = arr[counter];
+                counter++;
+            })
+            }
+
+            function ShiftArrayForward()
+            {
+            let i;
+            const size = arr.length;
+            let lastElement = arr[size - 1];
+
+            for (i = size - 1; i > 0 ; i--)
+            {
+            arr[i] = arr[i - 1];
+            }
+
+            arr[0] = lastElement;
+            }
+
+            function ShiftArrayBackward()
+            {
+            let i;
+            const size = arr.length;
+            let firstElement = arr[0];
+
+            for (i = 0; i < size-1 ; i++)
+            {
+            arr[i] = arr[i + 1];
+            }
+
+            arr[size - 1] = firstElement;
+            }
+
+            btnup.addEventListener('click', ()=>{numberIntoArray();ShiftArrayBackward();DisplayNumbersFromArray();
+            });
+
+            btndown.addEventListener('click' , ()=>{ numberIntoArray();ShiftArrayForward();DisplayNumbersFromArray();})
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    align-items: center;
+    padding-left: 25px;
+    display: flex;
+}
+#second{
+    padding-left: 25px;
+    
+}
+#btnup{
+    font-size: 14px;
+    width: 150%;
+    padding: 6px 10px 6px 15px;
+    background-color: gray;
+    color: honeydew;
+}
+
+#btndown{
+    font-size: 14px;
+    width: 150%;
+    padding: 6px 10px 6px 15px;
+    background-color: gray;
+    color: honeydew;
+}

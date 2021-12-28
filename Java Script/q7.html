@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style/q7.css">
+    </head>
+    <body>
+        <form>
+            <table border="1" id="tblemain">
+            <tr>
+                <td id="email"> Email </td>
+                <td><input type="text" name="txtEmail" id="txtemail"></td>
+            </tr>
+
+            <tr>
+                <td id="pwd">Password</td>
+                <td><input type="password" name="pwdemail" id="pwdmail"></td>
+            </tr>
+
+            <tr>
+                <td id="repwd"> Re-enter Password</td>
+                <td><input type="password" name="pwdremail" id="pwdre"></td>
+            </tr>
+
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name="txtname" id="txtname"></td>
+            </tr>
+
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="txtlastname" id="txtlastname"></td>
+            </tr>
+
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="date" placeholder="dd-mm-yyyy" name="dtedob" id="dtedob"></td>
+            </tr>
+
+            
+        </table>
+    </form>
+    
+        <div id="btnsbmsn">
+            
+            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<input type="button"  name="btnregister" value="Register" id="btnregister">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="button" name="btnreset" value="Re-set" id="btnreset">
+        </div>
+        
+        <script>
+                let register=document.getElementById("btnregister");
+                let reset =document.getElementById("btnreset");
+                 let name = document.getElementById("txtname");
+                let lastname = document.getElementById("txtlastname");
+                let password = document.getElementById("pwdmail");
+                let repassword = document.getElementById("pwdre");
+                let emailid = document.getElementById("txtemail");
+                let filter =/^([a-zA-Z0-9_\.\-]) + \@(([a-zA-Z0-9\-])+\.)+([a-a-zA-Z0-9]{2,4})+$/
+               
+                let dateofbirth = document.getElementById("dtedob");
+            register.addEventListener("click",function(e){validatename();})
+            register.addEventListener("click",function(e){validatepassword();})
+            register.addEventListener("click",function(e){validaterepassword();})
+            register.addEventListener("click",function(e){validateemail();})
+            register.addEventListener("click",function(e){validatelastname();})
+            register.addEventListener("click",function(e){validatedateofbirth();})
+            reset.addEventListener("click",function(e){reset;})
+            document.write("Succesfully Registered");
+            console.log(name);
+            function validatename()
+            {
+                
+                console.log(name.value);
+                if(name.value==="")
+                {
+                    alert("blank name is not allowed ");
+                }
+            }
+         
+            function validatepassword()
+            {
+             console.log(password.value);
+             if (password.value==="")
+                {
+                    alert("Pls enter password");
+                }
+                else if(!filter.test(password.value))
+                {
+                    alert("Please provide a valid password");
+                    password.focus;
+                    return false;
+                }
+            }
+            
+            function validaterepassword()
+            {
+                console.log(repassword.value);
+                if(password.value!==repassword.value)
+                {
+                    alert("confirm password should same as password entered ablove")
+                }
+
+            }
+
+            function validateemail()
+            {
+                console.log(emailid.value)
+                if(emailid.value ==="")
+                {
+                    alert("please enter emailID");
+                }
+                else if(!filter.test(emailid.value))
+                {
+                    alert("Please provide a valid Email ID");
+                    emailid.focus;
+                    return false;
+                }
+            }
+
+            function validatelastname()
+            {
+                console.log(lastname.value);
+                if(lastname.value ==="")
+                {
+                    alert("Plase enter last name");
+                }
+            }
+
+            function validatedateofbirth()
+            {
+                console.log(dateofbirth.value)
+                if(dateofbirth.value==="")
+                {
+                    alert("Please select valid date of birth");
+                }
+            }
+           
+            
+          
+        </script>
+    </body>
+</html>
